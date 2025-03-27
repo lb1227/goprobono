@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoProBono</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f8fa;
+      color: #222;
+    }
+    header {
+      background: #2e2e2e;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .cta-buttons a {
+      background: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .problem, .solution, .how-it-works {
+      margin-bottom: 60px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .step-box {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .email-form {
+      text-align: center;
+      margin-top: 40px;
+    }
+    input[type="email"] {
+      padding: 10px;
+      width: 300px;
+      max-width: 90%;
+      margin-right: 10px;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      background: #2e2e2e;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>GoProBono</h1>
+    <p>Where law students go pro bono—and people get the legal help they deserve.</p>
+    <div class="cta-buttons">
+      <a href="#form">I'm a Law Student</a>
+      <a href="#form">I'm an Attorney</a>
+    </div>
+  </header>
+
+  <section class="problem">
+    <h2>The Problem</h2>
+    <ul>
+      <li>⚠️ Students struggle to find qualifying pro bono work</li>
+      <li>⚠️ Tracking hours and paperwork is messy</li>
+      <li>⚠️ Underserved communities lack legal help</li>
+    </ul>
+  </section>
+
+  <section class="solution">
+    <h2>The Solution</h2>
+    <p><strong>GoProBono</strong> connects law students and attorneys with real legal issues from underserved communities. We streamline supervision, hour tracking, and documentation—making the 50-hour bar requirement easier and more impactful.</p>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step-box">
+        <h3>1. Submit a Legal Issue</h3>
+        <p>Clients describe their legal problem through our simple form.</p>
+      </div>
+      <div class="step-box">
+        <h3>2. Claim & Complete the Work</h3>
+        <p>Students or attorneys choose cases that match their interests.</p>
+      </div>
+      <div class="step-box">
+        <h3>3. Log Hours & Get Verified</h3>
+        <p>Track your time, get supervisor sign-off, and generate the required NYS form.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="email-form" id="form">
+    <h2>Join the Waitlist</h2>
+    <form>
+      <input type="email" placeholder="Your email address" required />
+      <input type="submit" value="Notify Me" />
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GoProBono. Not a law firm. Does not provide legal advice.</p>
+    <p>Built with purpose by [Your Name]</p>
+  </footer>
+
+</body>
+</html>

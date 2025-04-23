@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings – GoProBono</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+      display: flex;
+    }
+    .student-sidebar {
+      width: 240px;
+      background-color: #1e1e2f;
+      color: white;
+      padding: 32px 24px;
+      min-height: 100vh;
+    }
+    .student-sidebar h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 16px; }
+    .nav-divider {
+      height: 2px; background-color: #2f2f45; margin-bottom: 20px; border-radius: 1px;
+    }
+    .student-sidebar nav a {
+      color: #cfcfd6; text-decoration: none; font-weight: 500; padding: 10px 12px;
+      border-radius: 6px; transition: 0.2s; display: block;
+    }
+    .student-sidebar nav a:hover { background: #2a2a40; color: #fff; }
+    .student-sidebar nav a.active {
+      background: #fff; color: #1e1e2f; font-weight: 600;
+    }
+    .student-content { flex: 1; padding: 40px; }
+    .student-content h3 {
+      font-size: 1.8rem; margin-bottom: 30px;
+    }
+    .setting-item {
+      background: white; padding: 20px; border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+    .setting-item label {
+      display: block; margin-bottom: 8px; font-weight: 600;
+    }
+    .setting-item input {
+      width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;
+    }
+    .setting-item button {
+      margin-top: 16px; background-color: #4f46e5; color: white;
+      border: none; padding: 10px 16px; border-radius: 6px; font-weight: 600;
+      cursor: pointer;
+    }
+    .setting-item button:hover { background-color: #4338ca; }
+  </style>
+</head>
+<body>
+  <aside class="student-sidebar">
+    <h2>GoProBono</h2>
+    <div class="nav-divider"></div>
+    <nav>
+      <a href="student-dashboard.html">Dashboard</a>
+      <a href="timelog.html">Time Log</a>
+      <a href="opportunities.html">Opportunities</a>
+      <a href="messages.html">Messages</a>
+      <a href="settings.html" class="active">Settings</a>
+    </nav>
+  </aside>
+  <main class="student-content">
+    <h3>Settings</h3>
+    <div class="setting-item">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" value="student@example.com" />
+      <button>Update Email</button>
+    </div>
+    <div class="setting-item">
+      <label for="password">New Password</label>
+      <input type="password" id="password" />
+      <button>Update Password</button>
+    </div>
+  </main>
+</body>
+</html>

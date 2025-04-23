@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Requests – GoProBono</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+
+    .dashboard {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .student-sidebar {
+      width: 240px;
+      background-color: #1e1e2f;
+      color: white;
+      padding: 32px 24px;
+      min-height: 100vh;
+    }
+
+    .student-sidebar h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .nav-divider {
+      height: 2px;
+      background-color: #2f2f45;
+      margin-bottom: 20px;
+      border-radius: 1px;
+    }
+
+    .student-sidebar nav a {
+      color: #cfcfd6;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: 0.2s;
+      display: block;
+    }
+
+    .student-sidebar nav a:hover { background: #2a2a40; color: #fff; }
+
+    .student-sidebar nav a.active {
+      background: #fff;
+      color: #1e1e2f;
+      font-weight: 600;
+    }
+
+    .student-content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .student-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+    }
+
+    .request-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+
+    .request-card p {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .status {
+      font-weight: bold;
+      color: #4f46e5;
+    }
+
+    @media (max-width: 768px) {
+      .dashboard {
+        flex-direction: column;
+      }
+
+      .student-sidebar {
+        width: 100%;
+      }
+
+      .student-content {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="student-sidebar">
+      <h2>GoProBono</h2>
+      <div class="nav-divider"></div>
+      <nav>
+        <a href="intake.html">Request Help</a>
+        <a href="intake-status.html" class="active">My Requests</a>
+        <a href="intake-messages.html">Messages</a>
+        <a href="resources.html">Legal Resources</a>
+        <a href="profile.html">My Info</a>
+      </nav>
+    </aside>
+
+    <main class="student-content">
+      <h3>My Requests</h3>
+
+      <div class="request-card">
+        <p><strong>Issue:</strong> Housing & Eviction</p>
+        <p><strong>Submitted:</strong> April 18, 2025</p>
+        <p><strong>Status:</strong> <span class="status">Under Review</span></p>
+      </div>
+
+      <div class="request-card">
+        <p><strong>Issue:</strong> Immigration</p>
+        <p><strong>Submitted:</strong> April 10, 2025</p>
+        <p><strong>Status:</strong> <span class="status">Matched with Student Volunteer</span></p>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>

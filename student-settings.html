@@ -17,23 +17,49 @@
       background-color: #1e1e2f;
       color: white;
       padding: 32px 24px;
-      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
-    .student-sidebar h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 16px; }
+    .student-sidebar h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
     .nav-divider {
-      height: 2px; background-color: #2f2f45; margin-bottom: 20px; border-radius: 1px;
+      height: 2px;
+      background-color: #2f2f45;
+      margin-bottom: 20px;
+      border-radius: 1px;
     }
     .student-sidebar nav a {
-      color: #cfcfd6; text-decoration: none; font-weight: 500; padding: 10px 12px;
-      border-radius: 6px; transition: 0.2s; display: block;
+      color: #cfcfd6;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: 0.2s;
+      display: block;
     }
-    .student-sidebar nav a:hover { background: #2a2a40; color: #fff; }
+    .student-sidebar nav a:hover {
+      background: #2a2a40;
+      color: #fff;
+    }
+
     .student-sidebar nav a.active {
-      background: #fff; color: #1e1e2f; font-weight: 600;
+      background: #fff;
+      color: #1e1e2f;
+      font-weight: 600;
     }
-    .student-content { flex: 1; padding: 40px; }
+    .student-content {
+      flex: 1;
+      padding: 40px;
+    }
+
     .student-content h3 {
-      font-size: 1.8rem; margin-bottom: 30px;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
     }
     .setting-item {
       background: white; padding: 20px; border-radius: 8px;

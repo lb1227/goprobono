@@ -146,50 +146,30 @@
       background-color: #4338ca;
     }
 
-    .topbar {
+    .role-topnav {
       display: flex;
       justify-content: flex-end;
-      align-items: center;
-      margin-bottom: 20px;
-      width: 100%;
-      position: relative;
+      gap: 20px;
+      margin-bottom: 30px;
+      font-size: 16px;
     }
     
-    .menu-wrapper {
-      position: relative;
-    }
-    
-    .kebab-button {
-      background: none;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-      padding: 10px;
-    }
-    
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 40px;
-      right: 0;
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      z-index: 999;
-      min-width: 200px;
-    }
-    
-    .dropdown-menu a {
-      display: block;
-      padding: 10px 16px;
+    .role-topnav a {
       text-decoration: none;
-      color: #1f2937;
-      font-weight: 500;
+      color: #374151;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
     }
     
-    .dropdown-menu a:hover {
-      background-color: #f3f4f6;
+    .role-topnav a:hover {
+      background-color: #e5e7eb;
+    }
+    
+    .role-topnav a.active {
+      background-color: #4f46e5;
+      color: white;
     }
 
     @media (max-width: 768px) {
@@ -232,16 +212,11 @@
     </aside>
     <!-- Main Content -->
     <main class="student-content">
-      <div class="topbar">
-        <div class="menu-wrapper">
-          <button class="kebab-button" onclick="toggleMenu()">⋮</button>
-          <div class="dropdown-menu" id="roleMenu">
-            <a href="student-dashboard.html">View as Student</a>
-            <a href="admin.html">View as Admin</a>
-            <a href="nonprofit.html">View as Nonprofit</a>
-            <a href="intake.html">View as Individual</a>
-          </div>
-        </div>
+      <div class="role-topnav">
+        <a href="student-dashboard.html" class="active">Student</a>
+        <a href="admin.html">Admin</a>
+        <a href="nonprofit.html">Nonprofit</a>
+        <a href="intake.html">Individual</a>
       </div>
     
       <h3>Student Dashboard</h3>

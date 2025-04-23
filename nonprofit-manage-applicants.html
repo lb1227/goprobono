@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Applicants – GoProBono</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+    .nonprofit-dashboard {
+      display: flex;
+      min-height: 100vh;
+    }
+    .nonprofit-sidebar {
+      width: 240px;
+      background-color: #1e1e2f;
+      color: white;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .nonprofit-sidebar h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .nav-divider {
+      height: 2px;
+      background-color: #2f2f45;
+      margin-bottom: 20px;
+      border-radius: 1px;
+    }
+    .nonprofit-sidebar nav a {
+      color: #cfcfd6;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: 0.2s;
+      display: block;
+    }
+    .nonprofit-sidebar nav a:hover {
+      background: #2a2a40;
+      color: #fff;
+    }
+    .nonprofit-sidebar nav a.active {
+      background: #fff;
+      color: #1e1e2f;
+      font-weight: 600;
+    }
+    .nonprofit-content {
+      flex: 1;
+      padding: 40px;
+    }
+    .role-topnav {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+    .role-topnav a {
+      text-decoration: none;
+      color: #374151;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+    }
+    .role-topnav a:hover {
+      background-color: #e5e7eb;
+    }
+    .role-topnav a.active {
+      background-color: #4f46e5;
+      color: white;
+    }
+    .nonprofit-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+    }
+    .applicant-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+    .applicant-card h4 {
+      margin-bottom: 10px;
+    }
+    .applicant-card button {
+      margin-top: 10px;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .applicant-card button:hover {
+      background-color: #4338ca;
+    }
+  </style>
+</head>
+<body>
+  <div class="nonprofit-dashboard">
+    <aside class="nonprofit-sidebar">
+      <h2>GoProBono</h2>
+      <div class="nav-divider"></div>
+      <nav>
+        <a href="nonprofit.html">Dashboard</a>
+        <a href="nonprofit-post-opportunity.html">Post Opportunity</a>
+        <a href="nonprofit-review-student-logs.html">Review Student Logs</a>
+        <a href="nonprofit-manage-applicants.html" class="active">Manage Applicants</a>
+        <a href="nonprofit-settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="nonprofit-content">
+      <div class="role-topnav">
+        <a href="student-dashboard.html">Student</a>
+        <a href="admin.html">Admin</a>
+        <a href="nonprofit.html" class="active">Nonprofit</a>
+        <a href="school.html">School</a>
+        <a href="intake.html">Individual</a>
+      </div>
+      <h3>Manage Applicants</h3>
+      <div class="applicant-card">
+        <h4>Jane Doe</h4>
+        <p>Interested in: Immigration Clinic</p>
+        <button>View Application</button>
+      </div>
+      <div class="applicant-card">
+        <h4>John Smith</h4>
+        <p>Interested in: Housing Advocacy</p>
+        <button>View Application</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

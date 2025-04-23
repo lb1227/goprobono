@@ -151,6 +151,7 @@
       justify-content: flex-end;
       align-items: center;
       margin-bottom: 20px;
+      width: 100%;
       position: relative;
     }
     
@@ -229,20 +230,20 @@
         <a href="#">Settings</a>
       </nav>
     </aside>
-    <div class="topbar">
-      <div class="menu-wrapper">
-        <button class="kebab-button" onclick="toggleMenu()">⋮</button>
-        <div class="dropdown-menu" id="roleMenu">
-          <a href="student.html">View as Student</a>
-          <a href="admin.html">View as Admin</a>
-          <a href="nonprofit.html">View as Nonprofit</a>
-          <a href="intake.html">View as Individual</a>
-        </div>
-      </div>
-    </div>
-
     <!-- Main Content -->
     <main class="student-content">
+      <div class="topbar">
+        <div class="menu-wrapper">
+          <button class="kebab-button" onclick="toggleMenu()">⋮</button>
+          <div class="dropdown-menu" id="roleMenu">
+            <a href="student.html">View as Student</a>
+            <a href="admin.html">View as Admin</a>
+            <a href="nonprofit.html">View as Nonprofit</a>
+            <a href="intake.html">View as Individual</a>
+          </div>
+        </div>
+      </div>
+    
       <h3>Student Dashboard</h3>
 
       <div class="dashboard-cards">

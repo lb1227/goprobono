@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Request Legal Help – GoProBono</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9fafb;
@@ -22,7 +27,9 @@
       background-color: #1e1e2f;
       color: white;
       padding: 32px 24px;
-      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
     .student-sidebar h2 {
@@ -32,7 +39,10 @@
     }
 
     .nav-divider {
-      height: 2px; background-color: #2f2f45; margin-bottom: 20px; border-radius: 1px;
+      height: 2px;
+      background-color: #2f2f45;
+      margin-bottom: 20px;
+      border-radius: 1px;
     }
 
     .student-sidebar nav a {
@@ -45,7 +55,10 @@
       display: block;
     }
 
-    .student-sidebar nav a:hover { background: #2a2a40; color: #fff; }
+    .student-sidebar nav a:hover {
+      background: #2a2a40;
+      color: #fff;
+    }
 
     .student-sidebar nav a.active {
       background: #fff;
@@ -56,14 +69,11 @@
     .student-content {
       flex: 1;
       padding: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .student-content h3 {
       font-size: 1.8rem;
-      margin-bottom: 24px;
+      margin-bottom: 30px;
     }
 
     .role-topnav {

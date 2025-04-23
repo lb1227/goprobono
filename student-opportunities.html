@@ -2,123 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Opportunities – GoProBono</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Opportunities – GoProBono</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9fafb;
       color: #1f2937;
       display: flex;
+      min-height: 100vh;
     }
 
-    .student-sidebar {
+    .sidebar {
       width: 240px;
       background-color: #1e1e2f;
       color: white;
       padding: 32px 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      min-height: 100vh;
     }
 
-    .student-sidebar h2 {
+    .sidebar h2 {
       font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    .nav-divider {
-      height: 2px;
-      background-color: #2f2f45;
       margin-bottom: 20px;
-      border-radius: 1px;
     }
 
-    .student-sidebar nav a {
+    .sidebar nav a {
+      display: block;
       color: #cfcfd6;
+      margin-bottom: 14px;
       text-decoration: none;
       font-weight: 500;
-      padding: 10px 12px;
-      border-radius: 6px;
-      transition: 0.2s;
-      display: block;
     }
 
-    .student-sidebar nav a:hover {
-      background: #2a2a40;
-      color: #fff;
+    .sidebar nav a:hover {
+      color: white;
     }
 
-    .student-sidebar nav a.active {
-      background: #fff;
-      color: #1e1e2f;
-      font-weight: 600;
-    }
-
-    .student-content {
+    .main {
       flex: 1;
       padding: 40px;
     }
 
-    .student-content h3 {
+    .main h3 {
       font-size: 1.8rem;
-      margin-bottom: 30px;
-    }
-
-    .opportunity-card {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 24px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
       margin-bottom: 20px;
     }
 
-    .opportunity-card h4 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
+    .filter-bar {
+      margin-bottom: 24px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
     }
 
-    .opportunity-card p {
+    select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      margin-bottom: 16px;
+    }
+
+    .card h4 {
+      margin-bottom: 8px;
+    }
+
+    .card p {
       margin: 6px 0;
     }
 
-    .opportunity-card .label {
+    .tag {
       display: inline-block;
-      background: #e0e7ff;
-      color: #3730a3;
-      padding: 4px 10px;
-      border-radius: 999px;
+      background: #e5e7eb;
+      color: #374151;
       font-size: 13px;
-      margin-top: 8px;
-    }
-
-    .apply-button {
-      margin-top: 16px;
-      background-color: #4f46e5;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .apply-button:hover {
-      background-color: #4338ca;
+      padding: 4px 8px;
+      border-radius: 5px;
+      margin-right: 6px;
     }
   </style>
 </head>
 <body>
-
-  <!-- Sidebar -->
-  <aside class="student-sidebar">
+  <aside class="sidebar">
     <h2>GoProBono</h2>
-    <div class="nav-divider"></div>
     <nav>
       <a href="student-dashboard.html">Dashboard</a>
       <a href="student-time-log.html">Time Log</a>
@@ -128,40 +104,47 @@
     </nav>
   </aside>
 
-  <!-- Main Content -->
-  <main class="student-content">
-    <h3>Pro Bono Opportunities</h3>
-
-    <!-- Opportunity 1 -->
-    <div class="opportunity-card">
-      <h4>Immigration Intake Assistance</h4>
-      <p><strong>Provider:</strong> NY Legal Aid</p>
-      <p><strong>Supervising Attorney:</strong> Maria Lopez</p>
-      <p><strong>Estimated Time:</strong> 5–10 hrs/week</p>
-      <p><span class="label">Remote</span></p>
-      <button class="apply-button">Apply</button>
+  <main class="main">
+    <h3>Opportunities</h3>
+    <div class="filter-bar">
+      <label for="issueFilter">Filter by Legal Issue:</label>
+      <select id="issueFilter">
+        <option value="">All Issues</option>
+        <option>Immigration</option>
+        <option>Housing & Eviction</option>
+        <option>Public Benefits</option>
+        <option>Consumer Rights</option>
+      </select>
     </div>
 
-    <!-- Opportunity 2 -->
-    <div class="opportunity-card">
-      <h4>Housing Rights Help Desk</h4>
-      <p><strong>Provider:</strong> Tenants United NYC</p>
-      <p><strong>Supervising Attorney:</strong> James Park</p>
-      <p><strong>Estimated Time:</strong> 3–6 hrs/week</p>
-      <p><span class="label">In Person – Brooklyn</span></p>
-      <button class="apply-button">Apply</button>
+    <div class="section">
+      <h4>Reviewed + Ready Opportunities</h4>
+      <div class="card">
+        <h4>Housing Rights Clinic</h4>
+        <p>Type: Supervised Legal Aid</p>
+        <p><span class="tag">Housing & Eviction</span></p>
+        <p>Status: Approved by Supervisor</p>
+      </div>
     </div>
 
-    <!-- Opportunity 3 -->
-    <div class="opportunity-card">
-      <h4>Expungement Support</h4>
-      <p><strong>Provider:</strong> Justice Project</p>
-      <p><strong>Supervising Attorney:</strong> Latasha Green</p>
-      <p><strong>Estimated Time:</strong> 4 hrs/week</p>
-      <p><span class="label">Remote</span></p>
-      <button class="apply-button">Apply</button>
+    <div class="section">
+      <h4>Review Legal Intake Submissions</h4>
+      <div class="card">
+        <h4>Tenant facing eviction without lease</h4>
+        <p>Location: Bronx, NY</p>
+        <p><span class="tag">Housing & Eviction</span> <span class="tag">Needs Review</span></p>
+        <p><a href="#">Review & Tag</a></p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h4>My Opportunities</h4>
+      <div class="card">
+        <h4>Public Benefits Help Desk</h4>
+        <p>Status: In Progress</p>
+        <p>Logged: 12 hours</p>
+      </div>
     </div>
   </main>
-
 </body>
 </html>

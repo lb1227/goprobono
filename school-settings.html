@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Settings – GoProBono</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+
+    .school-dashboard {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .school-sidebar {
+      width: 240px;
+      background-color: #1e1e2f;
+      color: white;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .school-sidebar h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .nav-divider {
+      height: 2px;
+      background-color: #2f2f45;
+      margin-bottom: 20px;
+      border-radius: 1px;
+    }
+
+    .school-sidebar nav a {
+      color: #cfcfd6;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: 0.2s;
+      display: block;
+    }
+
+    .school-sidebar nav a:hover {
+      background: #2a2a40;
+      color: #fff;
+    }
+
+    .school-sidebar nav a.active {
+      background: #fff;
+      color: #1e1e2f;
+      font-weight: 600;
+    }
+
+    .school-content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .role-topnav {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .role-topnav a {
+      text-decoration: none;
+      color: #374151;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+    }
+
+    .role-topnav a:hover {
+      background-color: #e5e7eb;
+    }
+
+    .role-topnav a.active {
+      background-color: #4f46e5;
+      color: white;
+    }
+
+    .school-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    .setting-item {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+
+    .setting-item label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .setting-item input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .setting-item button {
+      margin-top: 16px;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .setting-item button:hover {
+      background-color: #4338ca;
+    }
+
+    @media (max-width: 768px) {
+      .school-dashboard {
+        flex-direction: column;
+      }
+
+      .school-sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+      }
+
+      .school-content {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="school-dashboard">
+    <!-- Sidebar -->
+    <aside class="school-sidebar">
+      <h2>GoProBono</h2>
+      <div class="nav-divider"></div>
+      <nav>
+        <a href="school.html">Dashboard</a>
+        <a href="school-logs.html">Student Logs</a>
+        <a href="school-compliance.html">Compliance Reports</a>
+        <a href="school-approvals.html">Approvals</a>
+        <a href="school-settings.html" class="active">Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="school-content">
+      <div class="role-topnav">
+        <a href="student-dashboard.html">Student</a>
+        <a href="admin.html">Admin</a>
+        <a href="nonprofit.html">Nonprofit</a>
+        <a href="school.html" class="active">School</a>
+        <a href="intake.html">Individual</a>
+      </div>
+
+      <h3>Settings</h3>
+      <div class="setting-item">
+        <label for="school-email">Contact Email</label>
+        <input type="email" id="school-email" value="admin@school.edu" />
+        <button>Update Email</button>
+      </div>
+
+      <div class="setting-item">
+        <label for="admin-password">Admin Password</label>
+        <input type="password" id="admin-password" />
+        <button>Update Password</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -5,12 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Legal Help Request – GoProBono</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9fafb;
-      margin: 0;
-      padding: 0;
+      color: #1f2937;
+    }
+
+    .dashboard {
       display: flex;
+      min-height: 100vh;
     }
 
     .sidebar {
@@ -18,42 +27,43 @@
       background-color: #1e1e2f;
       color: white;
       padding: 32px 24px;
-      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
     .sidebar h2 {
       font-size: 1.6rem;
       font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .nav-divider {
+      height: 2px;
+      background-color: #2f2f45;
       margin-bottom: 20px;
+      border-radius: 1px;
     }
 
     .sidebar nav a {
       color: #cfcfd6;
       text-decoration: none;
-      display: block;
-      margin-bottom: 14px;
       font-weight: 500;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: 0.2s;
+      display: block;
     }
 
     .sidebar nav a:hover {
-      color: white;
+      background: #2a2a40;
+      color: #fff;
     }
 
-    .content {
-      flex: 1;
-      padding: 60px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #f9fafb;
-    }
-    
-    .content h3 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 24px;
-      text-align: center;
+    .sidebar nav a.active {
+      background: #fff;
+      color: #1e1e2f;
+      font-weight: 600;
     }
     
     form {
@@ -144,6 +154,7 @@
 
   <aside class="sidebar">
     <h2>GoProBono</h2>
+    <div class="nav-divider"></div>
     <nav>
       <a href="#">Home</a>
       <a href="#">Student</a>

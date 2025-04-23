@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Legal Resources – GoProBono</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+    .dashboard {
+      display: flex;
+      min-height: 100vh;
+    }
+    .student-sidebar {
+      width: 240px;
+      background-color: #1e1e2f;
+      color: white;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .student-sidebar h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .nav-divider {
+      height: 2px;
+      background-color: #2f2f45;
+      margin-bottom: 20px;
+      border-radius: 1px;
+    }
+    .student-sidebar nav a {
+      color: #cfcfd6;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: 0.2s;
+      display: block;
+    }
+    .student-sidebar nav a:hover {
+      background: #2a2a40;
+      color: #fff;
+    }
+    .student-sidebar nav a.active {
+      background: #fff;
+      color: #1e1e2f;
+      font-weight: 600;
+    }
+    .student-content {
+      flex: 1;
+      padding: 40px;
+    }
+    .student-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+    .resource-section {
+      background: white;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+    .resource-section h4 {
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+    .resource-section ul {
+      padding-left: 20px;
+    }
+    .resource-section ul li {
+      margin-bottom: 10px;
+    }
+    @media (max-width: 768px) {
+      .dashboard {
+        flex-direction: column;
+      }
+      .student-sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+      }
+      .student-content {
+        padding: 20px;
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="student-sidebar">
+      <h2>GoProBono</h2>
+      <div class="nav-divider"></div>
+      <nav>
+        <a href="intake.html">Request Help</a>
+        <a href="intake-status.html">My Requests</a>
+        <a href="intake-messages.html">Messages</a>
+        <a href="resources.html" class="active">Legal Resources</a>
+        <a href="profile.html">My Info</a>
+      </nav>
+    </aside>
+    <main class="student-content">
+      <h3>Legal Resources</h3>
+      <div class="resource-section">
+        <h4>Free Legal Aid Websites</h4>
+        <ul>
+          <li><a href="#">Legal Aid Society</a> – General support and services</li>
+          <li><a href="#">LawHelpNY.org</a> – Find legal information by topic</li>
+          <li><a href="#">NY State Unified Court System</a> – Forms and help centers</li>
+        </ul>
+      </div>
+      <div class="resource-section">
+        <h4>Educational Tools</h4>
+        <ul>
+          <li><a href="#">Tenant’s Rights Guide</a> – Understanding eviction law</li>
+          <li><a href="#">Know Your Rights – Immigrant Toolkit</a></li>
+          <li><a href="#">Public Benefits Overview</a></li>
+        </ul>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

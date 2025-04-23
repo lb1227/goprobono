@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoProBono Student Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+
+    .student-dashboard {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .student-sidebar {
+      width: 240px;
+      background-color: #1e1e2f;
+      color: white;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .student-sidebar h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .nav-divider {
+      height: 2px;
+      background-color: #2f2f45;
+      margin-bottom: 20px;
+      border-radius: 1px;
+    }
+
+    .student-sidebar nav a {
+      color: #cfcfd6;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: 0.2s;
+      display: block;
+    }
+
+    .student-sidebar nav a:hover {
+      background: #2a2a40;
+      color: #fff;
+    }
+
+    .student-sidebar nav a.active {
+      background: #fff;
+      color: #1e1e2f;
+      font-weight: 600;
+    }
+
+    .student-content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .student-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    .dashboard-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      flex: 1;
+      min-width: 260px;
+      min-height: 180px;
+    }
+
+    .card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .progress-container {
+      background: #e5e7eb;
+      height: 8px;
+      border-radius: 4px;
+      margin: 12px 0;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background-color: #4f46e5;
+      width: 70%;
+    }
+
+    .hours {
+      font-weight: bold;
+      color: #4b5563;
+    }
+
+    .status {
+      font-weight: 600;
+    }
+
+    .status.in-progress {
+      color: #f59e0b;
+    }
+
+    .floating-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #4f46e5;
+      color: white;
+      font-size: 16px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    .floating-button:hover {
+      background-color: #4338ca;
+    }
+
+    @media (max-width: 768px) {
+      .student-dashboard {
+        flex-direction: column;
+      }
+
+      .student-sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+      }
+
+      .student-content {
+        padding: 20px;
+        margin-left: 0;
+      }
+
+      .floating-button {
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="student-dashboard">
+    <!-- Sidebar -->
+    <aside class="student-sidebar">
+      <h2>GoProBono</h2>
+      <div class="nav-divider"></div>
+      <nav>
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Time Log</a>
+        <a href="#">Opportunities</a>
+        <a href="#">Messages</a>
+        <a href="#">Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="student-content">
+      <h3>Student Dashboard</h3>
+
+      <div class="dashboard-cards">
+        <!-- Time Log -->
+        <div class="card">
+          <h4>Time Log</h4>
+          <div class="progress-container">
+            <div class="progress-bar"></div>
+          </div>
+          <p class="hours">35 / 50 hours logged</p>
+        </div>
+
+        <!-- Opportunity -->
+        <div class="card">
+          <h4>Active Opportunity</h4>
+          <p><strong>Housing Rights Clinic</strong></p>
+          <p>Status: <span class="status in-progress">In Progress</span></p>
+        </div>
+      </div>
+
+      <div class="dashboard-cards">
+        <!-- Notifications -->
+        <div class="card">
+          <h4>Notifications</h4>
+          <ul>
+            <li>✔ Supervisor approved 3 hours</li>
+            <li>⚠ Missing log from Mar 29</li>
+          </ul>
+        </div>
+
+        <!-- Deadlines -->
+        <div class="card">
+          <h4>Upcoming Deadlines</h4>
+          <ul>
+            <li>📄 Submit Form – <strong>Apr 25</strong></li>
+            <li>⏳ 50-Hour Deadline – <strong>Jun 1</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Activity Log -->
+      <div class="card" style="margin-top: 20px;">
+        <h4>Recent Activity</h4>
+        <ul>
+          <li>✔ Logged 2 hours on Immigration Intake</li>
+          <li>✔ Joined "Public Benefits Help Desk"</li>
+          <li>⏳ Awaiting review – March 31</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <!-- Floating Button -->
+  <a href="#" class="floating-button">+ Log Hours</a>
+
+</body>
+</html>

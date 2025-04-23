@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Legal Help Request – GoProBono</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 240px;
+      background-color: #1e1e2f;
+      color: white;
+      padding: 32px 24px;
+      min-height: 100vh;
+    }
+
+    .sidebar h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .sidebar nav a {
+      color: #cfcfd6;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .sidebar nav a:hover {
+      color: white;
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+    }
+
+    form {
+      background-color: white;
+      padding: 32px;
+      border-radius: 8px;
+      max-width: 600px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      margin-top: 20px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      margin-top: 24px;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4338ca;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+
+      .content {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2>GoProBono</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Student</a>
+      <a href="#">Nonprofit</a>
+      <a href="#">Admin</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h3>Request Legal Help</h3>
+    <form onsubmit="return validateForm(event)">
+      <label for="firstName">First Name*</label>
+      <input type="text" id="firstName" name="firstName" required>
+
+      <label for="lastName">Last Name*</label>
+      <input type="text" id="lastName" name="lastName" required>
+
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number*</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="issue">Legal Issue*</label>
+      <select id="issue" name="issue" required>
+        <option value="">-- Select an Issue --</option>
+        <option>Immigration</option>
+        <option>Housing & Eviction</option>
+        <option>Employment</option>
+        <option>Family Law</option>
+        <option>Disability Rights</option>
+        <option>Consumer Protection</option>
+        <option>Public Benefits</option>
+        <option>Domestic Violence</option>
+        <option>Education Access</option>
+        <option>Wills & Estates</option>
+        <option>Veterans Rights</option>
+        <option>Civil Rights</option>
+        <option>Criminal Record Expungement</option>
+        <option>Other</option>
+      </select>
+
+      <label for="description">Brief Description of Your Situation*</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </main>
+
+  <script>
+    function validateForm(event) {
+      // Add any additional JS validation here if needed
+      alert("Thank you! Your request has been submitted.");
+      event.preventDefault(); // Prevent actual submission in demo
+      return false;
+    }
+  </script>
+
+</body>

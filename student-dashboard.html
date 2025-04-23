@@ -146,6 +146,51 @@
       background-color: #4338ca;
     }
 
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    
+    .menu-wrapper {
+      position: relative;
+    }
+    
+    .kebab-button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      min-width: 200px;
+    }
+    
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 16px;
+      text-decoration: none;
+      color: #1f2937;
+      font-weight: 500;
+    }
+    
+    .dropdown-menu a:hover {
+      background-color: #f3f4f6;
+    }
+
     @media (max-width: 768px) {
       .student-dashboard {
         flex-direction: column;
@@ -184,6 +229,17 @@
         <a href="#">Settings</a>
       </nav>
     </aside>
+    <div class="topbar">
+      <div class="menu-wrapper">
+        <button class="kebab-button" onclick="toggleMenu()">⋮</button>
+        <div class="dropdown-menu" id="roleMenu">
+          <a href="student.html">View as Student</a>
+          <a href="admin.html">View as Admin</a>
+          <a href="nonprofit.html">View as Nonprofit</a>
+          <a href="intake.html">View as Individual</a>
+        </div>
+      </div>
+    </div>
 
     <!-- Main Content -->
     <main class="student-content">
@@ -242,5 +298,21 @@
   <!-- Floating Button -->
   <a href="#" class="floating-button">+ Log Hours</a>
 
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("roleMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  
+    // Close dropdown if clicked outside
+    window.onclick = function(e) {
+      if (!e.target.matches('.kebab-button')) {
+        const menu = document.getElementById("roleMenu");
+        if (menu && menu.style.display === "block") {
+          menu.style.display = "none";
+        }
+      }
+    }
+  </script>
 </body>
 </html>

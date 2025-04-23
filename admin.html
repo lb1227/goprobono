@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoProBono School Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+
+    .school-dashboard {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .school-sidebar {
+      width: 240px;
+      background-color: #1e1e2f;
+      color: white;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .school-sidebar h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .nav-divider {
+      height: 2px;
+      background-color: #2f2f45;
+      margin-bottom: 20px;
+      border-radius: 1px;
+    }
+
+    .school-sidebar nav a {
+      color: #cfcfd6;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: 0.2s;
+      display: block;
+    }
+
+    .school-sidebar nav a:hover {
+      background: #2a2a40;
+      color: #fff;
+    }
+
+    .school-sidebar nav a.active {
+      background: #fff;
+      color: #1e1e2f;
+      font-weight: 600;
+    }
+
+    .school-content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .role-topnav {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .role-topnav a {
+      text-decoration: none;
+      color: #374151;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+    }
+
+    .role-topnav a:hover {
+      background-color: #e5e7eb;
+    }
+
+    .role-topnav a.active {
+      background-color: #4f46e5;
+      color: white;
+    }
+
+    .school-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    .dashboard-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      flex: 1;
+      min-width: 260px;
+      min-height: 150px;
+    }
+
+    .card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    @media (max-width: 768px) {
+      .school-dashboard {
+        flex-direction: column;
+      }
+
+      .school-sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+      }
+
+      .school-content {
+        padding: 20px;
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="school-dashboard">
+    <!-- Sidebar -->
+    <aside class="school-sidebar">
+      <h2>GoProBono</h2>
+      <div class="nav-divider"></div>
+      <nav>
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Student Logs</a>
+        <a href="#">Compliance Reports</a>
+        <a href="#">Approvals</a>
+        <a href="#">Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="school-content">
+      <div class="role-topnav">
+        <a href="student-dashboard.html">Student</a>
+        <a href="admin.html">Admin</a>
+        <a href="nonprofit.html">Nonprofit</a>
+        <a href="school.html" class="active">School</a>
+        <a href="intake.html">Individual</a>
+      </div>
+
+      <h3>School Dashboard</h3>
+
+      <div class="dashboard-cards">
+        <div class="card">
+          <h4>Active Students</h4>
+          <p>23 students currently logging hours</p>
+        </div>
+
+        <div class="card">
+          <h4>Compliance Reports</h4>
+          <p>Download 50-hour reports for review</p>
+        </div>
+
+        <div class="card">
+          <h4>Pending Approvals</h4>
+          <p>6 hours awaiting admin approval</p>
+        </div>
+
+        <div class="card">
+          <h4>Flagged Logs</h4>
+          <p>3 entries need additional review</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
